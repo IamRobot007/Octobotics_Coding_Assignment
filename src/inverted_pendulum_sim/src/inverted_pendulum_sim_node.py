@@ -127,21 +127,21 @@ class InvertedPendulum:
         if req.pendulum_mass <= 0:
             rospy.logwarn(
                 "[InvertedPendulum]: Pendulum mass cannot be less than or equal to zero, using default value 10kg")
-            self.pendulum_m = 10
+            self.pendulum_m = 2
         else:
             self.pendulum_m = req.pendulum_mass
 
         if req.pendulum_length <= 0:
             rospy.logwarn(
                 "[InvertedPendulum]: Pendulum length cannot be less than or equal to zero, using default value 200m")
-            self.length = 200
+            self.length = 300
         else:
             self.length = req.pendulum_length
 
         if req.cart_mass <= 0:
             rospy.logwarn(
                 "[InvertedPendulum]: Cart mass cannot be less than or equal to zero, using default value 10kg")
-            self.cart_m = 10
+            self.cart_m = 0.5
         else:
             self.cart_m = req.cart_mass
 
